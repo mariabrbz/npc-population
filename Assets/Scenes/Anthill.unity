@@ -1549,11 +1549,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7730732518338173992, guid: fcd6980761eed44598412a00e4a3dc41, type: 3}
   m_PrefabInstance: {fileID: 703689158}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &722014450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6442689662088075819, guid: d72daca3181cc4ce6b173c3628ce51c8, type: 3}
-  m_PrefabInstance: {fileID: 1658519473}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &722014454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063065814015774197, guid: d72daca3181cc4ce6b173c3628ce51c8, type: 3}
@@ -2908,11 +2903,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd6980761eed44598412a00e4a3dc41, type: 3}
---- !u!1 &1357842003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6442689662088075819, guid: d72daca3181cc4ce6b173c3628ce51c8, type: 3}
-  m_PrefabInstance: {fileID: 6241420906108009668}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1357842007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063065814015774197, guid: d72daca3181cc4ce6b173c3628ce51c8, type: 3}
@@ -4991,11 +4981,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd6980761eed44598412a00e4a3dc41, type: 3}
---- !u!1 &2139602947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3280883116753992400, guid: 0797c6a9fdb7d448490a0b30b6988ed3, type: 3}
-  m_PrefabInstance: {fileID: 950332945}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1260764435772558231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5082,14 +5067,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259f5d306c6e44677bd63038c735d95b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodAreas:
-  - {fileID: 1357842003}
-  - {fileID: 722014450}
-  dropAreas:
-  - {fileID: 4668266213645617026}
-  - {fileID: 2139602947}
-  minSpeed: 0.2
-  maxSpeed: 1
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  speed: 1
+  getTarget: {fileID: 1357842007}
+  dropTarget: {fileID: 5585691985989128284}
 --- !u!58 &1260764435772558234
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5127,11 +5111,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &4668266213645617026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3280883116753992400, guid: 0797c6a9fdb7d448490a0b30b6988ed3, type: 3}
-  m_PrefabInstance: {fileID: 7872585360004136274}
+--- !u!114 &1260764435772558236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260764435772558232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &1260764435772558237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260764435772558232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 9
+    NumStackedVectorObservations: 1
+    VectorActionSize: 02000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 1
+  m_BehaviorName: ReachTarget
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!1001 &5070751084172618873
 PrefabInstance:
   m_ObjectHideFlags: 0

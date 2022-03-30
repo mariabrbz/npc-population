@@ -1,0 +1,29 @@
+{
+    "ReachTarget": {
+        "checkpoints": [
+            {
+                "steps": 448,
+                "file_path": "results/ppo/ReachTarget/ReachTarget-448.onnx",
+                "reward": null,
+                "creation_time": 1648660819.754998,
+                "auxillary_file_paths": [
+                    "results/ppo/ReachTarget/ReachTarget-448.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 448,
+            "file_path": "results/ppo/ReachTarget.onnx",
+            "reward": null,
+            "creation_time": 1648660819.754998,
+            "auxillary_file_paths": [
+                "results/ppo/ReachTarget/ReachTarget-448.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.8.1"
+    }
+}

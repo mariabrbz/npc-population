@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Brutal 2D Adventure Mega Pack/Brutal 2D Adventure Jungle Pack/Example/Example.unity
+- path: Assets/Scenes/Anthill.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
